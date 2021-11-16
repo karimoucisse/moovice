@@ -18,14 +18,17 @@ export default class Popular extends Component {
     render() {
         console.log(this.state.movies);
         return (
-            <div>
-                <h1>Popular</h1>
-                <div className="row">
-                {this.state.movies.map((movie,index) => {
-                    return <div key={index}>
-                            <Card title = {movie.title} releaseDate ={movie.release_date} />
-                        </div>
-                })}
+            <div className="container">
+                <div className="row d-flex justify-content-center">
+                    {this.state.movies.map((movie,index) => {
+                        return <Card 
+                                    imageSource = {`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                                    title = {movie.title} 
+                                    releaseDate ={movie.release_date} 
+                                    description = {movie.overview}
+                                    key= {movie.id}
+                                />      
+                    })}
                 </div>
                 
                 

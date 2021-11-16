@@ -8,6 +8,7 @@ import Weekly from "./pages/Weekly"
 import WeeklyBattle from "./pages/Weekly-battle"
 import Error404 from "./pages/Error404"
 import Nav from './Nav'
+import "./App.css"
 
 
 export default class App extends Component {
