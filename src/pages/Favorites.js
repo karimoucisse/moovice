@@ -23,6 +23,9 @@ export default class Favorites extends Component {
     }
     getStorage() {
         const favoris = JSON.parse(localStorage.getItem("favorites"))
+        if(!favoris) {
+            return []
+        }
         return favoris
     }
     getMovie(id) {
