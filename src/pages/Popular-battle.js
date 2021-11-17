@@ -25,21 +25,26 @@ export default class PopularBattle extends Component {
         if(getFavoritesLocaStorage){
             favoris = JSON.parse(getFavoritesLocaStorage)
             favoris.push(id)
-            console.log("mes favoris",favoris);
+            // console.log("mes favoris",favoris);
         }
 
         localStorage.setItem("favorites",JSON.stringify(favoris)) 
 
         // let favorites = JSON.parse(localStorage.getItem("favorites")) || []
         // favorites.push(id)
-        // localStorage.setItem("favorites",JSON.stringify(favoris)) 
+        // localStorage.setItem("favorites",JSON.stringify(favorites)) 
     }
+    
     render() {
         // console.log("movies:",this.state.movies);
         // console.log("movie1:",this.state.movies[0]);
         // console.log("movie2:",this.state.movies[1]);
         if(this.state.movies.length === 0) {
-            return <p>il ya pa de film</p>
+            return <div className="container">
+                <div className="row mt-5">
+                    <h1 className="col d-flex justify-content-center mt-5">il ya pas de film</h1>
+                </div>
+            </div>
         }
 
         return (

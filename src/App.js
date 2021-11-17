@@ -19,9 +19,9 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/favorites" component={Favorites}/>
-          <Route path="/popular" component={Popular}/>
+          <Route exact path="/popular" component={Popular}/>
           <Route path="/popularBattle" component={PopularBattle}/>
-          <Route path="/weekly" component={Weekly}/>
+          <Route exact path="/weekly" component={Weekly}/>
           <Route path="/weeklyBattle" component={WeeklyBattle}/>
           <Route path="/*" component={Error404}/>
         </Switch>
